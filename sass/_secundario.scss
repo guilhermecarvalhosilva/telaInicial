@@ -1,0 +1,53 @@
+.secundario {
+    background: linear-gradient(to bottom, $cor-background, $cor-background), url('../assets/imagem-secundaria.png');
+    width: 100%;
+    height: auto;
+    padding: 50px 0px;
+    @include flexBox(row, center, center);
+
+    .card {
+        background-color: $cor-card;
+        border-radius: 10px;
+        min-height: 500px;
+        max-width: 1000px;
+        width: 90%;
+        @include flexBox(row, center, center);
+
+        .card-item {
+            color: $cor-branco;
+            font-size: 2em;
+            line-height: 2.1em;
+            font-weight: 600;
+            width: 80%;
+            text-align: center;
+
+            span {
+                color: $cor-amarelo;
+            }
+        }
+    }
+}
+
+@media(max-width: 660px) {
+
+    .secundario .card {
+        padding: 20px 0px;
+    }
+
+    .secundario .card .card-item  {
+        font-size: 1.7em;
+    }
+}
+
+@media(max-width: 450px) {
+    .secundario .card .card-item  {
+        font-size: 1.5em;
+        width: 90%;
+    }
+}
+
+@media(max-width: 350px) {
+   .secundario .card .card-item  {
+        font-size: 1.3em;
+    }
+}

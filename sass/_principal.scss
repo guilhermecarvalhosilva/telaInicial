@@ -1,0 +1,115 @@
+.principal {
+    background: linear-gradient(to bottom, $cor-background, $cor-background), url('../assets/imagem-principal.png');
+    width: 100%;
+    height: auto;
+    @include flexBox(column, center, center);
+    gap: 50px 0px;
+    padding: 0px 0px 50px 0px;
+
+    .cabecalho {
+        width: 100%;
+        height: 120px;
+        @include flexBox(row, space-between, center);
+        padding: 0px 60px 0px 0px;
+
+        .logo {
+            background-color: $cor-amarelo;
+            max-width: 300px;
+            width: 100%;
+            height: 65px;
+            border-radius: 0px 15px 15px 0px;
+            @include flexBox(row, center, center);
+
+            .logo-item {
+                color: $cor-branco;
+                font-size: 1.1em;
+                font-weight: 600;
+
+                span {
+                    font-size: 1.3em;
+                }
+            }
+        }
+
+        .botao {
+            background-color: $cor-amarelo;
+            max-width: 120px;
+            width: 100%;
+            height: 50px;
+            border-radius: 3px;
+            @include flexBox(row, center, center);
+            color: $cor-branco;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: 600;
+            transition: 0.3s;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+
+    .card {
+        background-color: $cor-card;
+        border-radius: 10px;
+        min-height: 500px;
+        max-width: 1000px;
+        width: 90%;
+        @include flexBox(row, center, center);
+
+        .card-item {
+            color: $cor-branco;
+            font-size: 2em;
+            line-height: 2.1em;
+            font-weight: 600;
+            width: 80%;
+            text-align: center;
+
+            span {
+                color: $cor-amarelo;
+            }
+        }
+    }
+}
+
+@media(max-width: 660px) {
+    .principal .cabecalho {
+        flex-direction: column;
+        gap: 20px 0px;
+        height: auto;
+        padding: 20px 0px;
+    }
+
+    .principal .card {
+        padding: 20px 0px;
+    }
+
+    .principal .card .card-item  {
+        font-size: 1.7em;
+    }
+}
+
+@media(max-width: 450px) {
+    .principal .card .card-item  {
+        font-size: 1.5em;
+        width: 90%;
+    }
+}
+
+@media(max-width: 380px) {
+    .principal .cabecalho .logo {
+        max-width: 240px;
+        width: 95%;
+    }
+
+    .principal .cabecalho .logo .logo-item  {
+        font-size: 0.9em;
+    }
+}
+
+@media(max-width: 350px) {
+    .principal .card .card-item  {
+        font-size: 1.3em;
+    }
+}

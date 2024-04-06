@@ -1,0 +1,42 @@
+.rodape {
+    background-color: $cor-rodape;
+    min-height: 250px;
+    width: 100%;
+    @include flexBox(column, center, center);
+    gap: 50px 0px;
+
+    .paragrafo {
+        color: $cor-branco;
+        font-size: 1.5em;
+        font-weight: 600;
+        text-align: center;
+        width: 90%
+    }
+
+    .links {
+        @include flexBox(row, center, center);
+        gap: 0px 35px;
+
+        .link-item {
+            color: $cor-branco;
+            font-size: 2em;
+            transition: 0.5s;
+
+            &:hover {
+                transform: translateY(-10px);
+            }
+        }
+    }
+}
+
+@media(max-width: 500px) {
+    .rodape .paragrafo {
+        font-size: 1.3em;
+    }
+}
+
+@media(max-width: 350px) {
+    .rodape .paragrafo {
+        font-size: 1.1em;
+    }
+}

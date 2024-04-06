@@ -1,0 +1,12 @@
+$cor-background: rgba(30, 30, 30, 0.9);
+$cor-card: rgba(30, 30, 30, 0.64);
+$cor-rodape: rgba(30, 30, 30, 0.79);
+$cor-amarelo: #FBC949;
+$cor-branco: #ffffff;
+
+@mixin flexBox($direction, $content, $items) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $content;
+    align-items: $items;
+}
